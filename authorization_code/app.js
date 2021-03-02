@@ -14,9 +14,9 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = 'e1388536fe7e4fb387c815b14918c777'; // Your client id
-var client_secret = 'd9139236b87744ba89480d3713dca95e'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
+var client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
+var redirect_uri = process.env.SPOTIFY_CALLBACK_URI; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
